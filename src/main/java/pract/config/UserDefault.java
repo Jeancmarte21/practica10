@@ -25,7 +25,7 @@ public class UserDefault {
         usuario.setApellidos("Marte");
         usuario.setCorreo("jeancmarte21@gmail.com");
         usuario.setFechaNacimiento(LocalDate.of(1992, 11, 21));
-        usuario.setRol("ROLE_ADMINISTRADOR");
+        usuario.setRol("Administrador");
         usuario.setNombreUsuario("admin");
         usuario.setContrasena("admin");
         usuario.setHabilitado(true);
@@ -36,7 +36,7 @@ public class UserDefault {
 
         if (servicioRol.findAll().size() == 0) {
             Rol rol = new Rol();
-            rol.setNombre("ROLE_ADMINISTRADOR");
+            rol.setNombre("Administrador");
             rol.setDescripcion("admin.");
             servicioRol.save(rol);
 
