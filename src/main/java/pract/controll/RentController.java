@@ -36,7 +36,7 @@ public class RentController {
         return "rentals";
     }
 
-    @Secured({"ROLE_ADMINISTRADOR"})
+    @Secured({"Administrador"})
     @RequestMapping(value = "/registrar/alquiler", method = RequestMethod.POST)
     public String post(@RequestParam(name = "cliente") long cliente,
                        @RequestParam(name = "fechaentrega") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate fechaEntrega,

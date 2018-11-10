@@ -29,10 +29,10 @@ public class CustomController {
         model.addAttribute("clientes", servicioCliente.findAll());
         model.addAttribute("error", "");
 
-        return "clients";
+        return "custom";
     }
 
-    @Secured({"ROLE_ADMINISTRADOR"})
+    @Secured({"Administrador"})
     @RequestMapping(value = "/registrar/cliente", method = RequestMethod.POST)
     public String registrar(
             @RequestParam(value = "nombre") String nombre,

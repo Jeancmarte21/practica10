@@ -23,7 +23,7 @@ public class EquipController {
         return "equip";
     }
 
-    @Secured({"ROLE_ADMINISTRADOR"})
+    @Secured({"Administrador"})
     @RequestMapping(value = "/registrar/equipo", method = RequestMethod.POST)
     public String post(@RequestParam(name = "codigo") String codigo,
                         @RequestParam(name = "nombre") String nombre,

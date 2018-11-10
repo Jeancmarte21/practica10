@@ -32,7 +32,7 @@ public class UsersController {
         return "users";
     }
 
-    @Secured({"ROLE_ADMINISTRADOR"})
+    @Secured({"Administrador"})
     @RequestMapping(value = "/registrar/usuario", method = RequestMethod.POST)
     public String registrar(
             @RequestParam(value = "nombres") String nombres,
@@ -55,7 +55,7 @@ public class UsersController {
 
         servicioUsuario.save(usuario);
 
-        return "redirect:/usuarios";
+        return "redirect:/index";
     }
 
     @RequestMapping(value = "/borrar/usuario", method = RequestMethod.GET)
